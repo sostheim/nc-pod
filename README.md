@@ -19,8 +19,8 @@ $ docker push quay.io/samsung_cnct/nc-pod:latest
 
 ## Helm Chart
 This project might also end up being packaged as a Helm Chart eventually.  
-However, it's pretty dead simple as is, and might not need ever need to be a 
-chart either... we'll see.
+However, it's pretty dead simple as is, and might not need to ever become a 
+chart... we'll see.
 
 ## Configuration
 
@@ -33,7 +33,7 @@ For a complete description of 'nc' command line arguments see: [man nc(1)](https
 Environment Variable:
 * NC_CMD_ARGS: Required, a quoted string of nc command line arguments.
 
-Example (excerpt from Deployment spec yaml):
+Example (excerpt from [Deployment spec](https://kubernetes.io/docs/user-guide/deployments/#writing-a-deployment-spec) yaml):
 ```
     spec:
       containers:
