@@ -1,4 +1,4 @@
-#!/bin/ash -
+#!/bin/bash -
 #title      : run-nc.sh
 #description: run the netcat (nc) command with pod spec 'env:' yaml data.
 #author     : Samsung SDSRA
