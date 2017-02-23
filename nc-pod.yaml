@@ -19,7 +19,7 @@ spec:
           image: quay.io/samsung_cnct/nc-pod:latest 
           env:
             - name: NC_CMD_ARGS
-              value: "-kl -n -u -p 26500 "
+              value: "-kl -n -p 26500"
           ports:
           - containerPort: 26500 
 

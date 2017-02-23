@@ -1,9 +1,7 @@
 # nc-pod
 
 A simple [Kubernetes](https://kubernetes.io/) [Pod](https://kubernetes.io/docs/user-guide/pods/) that runs [netcat](http://netcat.sourceforge.net/) (nc) typically in the role of the
-listening endpoint.  Note for Alpine, which is the default for this project, 
-the 'nc' in use is the [netcat package](https://pkgs.alpinelinux.org/package/v3.5/main/x86/netcat-openbsd), which will vary slightly in use from 
-the more familar Linux version of 'nc'.
+listening endpoint.  
 
 The goal of this simple little Pod is to enable any number of Kubernetes 
 networking configuration test scenarios.  From a simple intra-pod connectivity
@@ -41,7 +39,7 @@ Example (excerpt from [Deployment spec](https://kubernetes.io/docs/user-guide/de
         image: quay.io/samsung_cnct/nc-pod
         env:
         - name: NC_CMD_ARGS
-          value: "-kl -n -u -p 26500"
+          value: "-lk -n -u -p 26500"
 ``` 
 
 ## Deployment
@@ -68,7 +66,7 @@ ep/nc-pod   10.64.0.23:26500   48s
 From the example [Deployment](https://kubernetes.io/docs/user-guide/deployments/) above we tail the output of the created pod.
 ```
 $ kubectl logs -f nc-pod-2355685321-3gd8r
-cmd: /usr/bin/nc -kl -n -u -p 26500 
+cmd: /bin/nc -lk -n -u -p 26500 
 ```
 We'll check back on the output of the 'logs' command after the next steps.
 
@@ -92,7 +90,7 @@ As soon as we hit ruturn on our input line above, we should have seen the
 following output scroll in our 'logs -f' terminal:
 ```
 rastop:nc-pod sostheim$ kubectl logs -f nc-pod-2355685321-3gd8r
-cmd: /usr/bin/nc -kl -n -u -p 26500 
+cmd: /bin/nc -lk -n -u -p 26500 
 Example of running netcat in a pod.
 ```
 
