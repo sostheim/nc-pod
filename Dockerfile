@@ -23,7 +23,7 @@ MAINTAINER Rick Sostheim
 LABEL vendor="Samsung CNCT"
 
 RUN apt update
-RUN apt install netcat net-tools iproute2 -y 
+RUN apt install netcat-openbsd net-tools iproute2 -y 
 
 COPY run-nc.sh /
 
