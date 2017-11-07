@@ -93,4 +93,3 @@ rastop:nc-pod sostheim$ kubectl logs -f nc-pod-2355685321-3gd8r
 cmd: /bin/nc -lk -n -u -p 26500 
 Example of running netcat in a pod.
 ```
-
