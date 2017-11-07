@@ -21,7 +21,6 @@ However, it's pretty dead simple as is, and might not need to ever become a
 chart... we'll see.
 
 ## Configuration
-
 Configuring 'nc' execution is handled by a single environment variable that 
 captures the entire set of 'nc' command line arguments, but not the 'nc'
 command itself.
@@ -62,7 +61,6 @@ ep/nc-pod   10.64.0.23:26500   48s
 ```
 
 ## Running / Testing with netcat
-
 From the example [Deployment](https://kubernetes.io/docs/user-guide/deployments/) above we tail the output of the created pod.
 ```
 $ kubectl logs -f nc-pod-2355685321-3gd8r
